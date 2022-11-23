@@ -1,0 +1,59 @@
+body{
+    background-color: rgb(202, 172, 230);
+    padding-left: 10px;
+    text-align: justify;
+}
+
+img{
+    width: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h1{
+    border: solid black 1px;
+}
+
+h3{
+    border: double black 3px;
+    background-color: rgb(205, 194, 215);
+    color: blueviolet;
+}
+
+h4{
+    background-color: rgb(135, 65, 201);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: double black 5px;
+    padding-left: 10px;
+}
+
+.why_bootcamp{
+    color: rgb(58, 8, 104);
+}
+
+.why_bootcamp spam{
+    font-style: italic;
+    font-weight: bold;
+}
+
+table, caption, tr, th{
+    border: solid 2px;
+    font-size: 20px;
+    padding: 10px 20px;
+
+}
+
+caption{
+    background-color:  rgb(135, 65, 201);
+}
+
+#link{
+    margin-top: 20px;
+}
+
+a:hover{
+    color: rgb(36, 9, 36);
+    font-weight: bold;
+}
+
