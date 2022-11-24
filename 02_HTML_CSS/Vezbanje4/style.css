@@ -5,8 +5,10 @@ body{
     text-align: justify;
 }
 
+/* dodala sam font-size za h2 da bi mi se naslov izdvojio od ostatka teksta */
 h2{
     text-align: center;
+    font-size: 40px;
     padding-top: 30px;
     padding-bottom: 30px;
     color: #EE9B01;
@@ -20,8 +22,7 @@ img{
 
 .yellow-color{
     color:#EE9B01;
-    font-size: 18px;
-    font-style: italic;
+    font-size: 28px;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: underline;
@@ -29,18 +30,19 @@ img{
 
 .without-lines{
     text-decoration: none;
+    padding-left: 30px;
+    font-size: 30px;
 }
 
 div p:nth-child(odd){
     color: #C8D2D1;
-    font-size: 18px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 div p:nth-child(even){
     color: #DA6A00;
-    font-size: 22px;
+    font-size: 28px;
 }
 
 div p:nth-child(2) a{
@@ -52,6 +54,9 @@ div p:nth-child(2) a:hover{
     
 }
 
+#flex{
+    display: flex;
+}
 
 
 
