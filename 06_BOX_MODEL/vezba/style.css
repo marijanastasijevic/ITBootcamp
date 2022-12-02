@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+/* kada ukljucimo box-sizing:border-box -- ukljucice se svi elementi (border i padinzi i onda mozemo da podesimo visine i sirine) */
+/* border box ne ukljucuje margine */
+#span1{
+    background-color: blue;
+    color: white;
+}
+
+#span2{
+    background-color: blueviolet;
+    /* margin-left: 30px;
+    margin-right: 80px; */
+}
+
+#span1, #span2{
+    border: 5px solid red;
+    width: 50%;
+    height: 200px;
+    padding: 10px 35px;
+    display: inline-block;
+}
+
+p{
+    background-color: coral;
+    width: 500px;
+    height: 300px;
+}
+
+/* 
+    display svojstvo: nacin prikaza HTML elementa: 
+    BLOCK - p, div, h1...h6, table  -- po difoltu se prilagodjavaju sirini ekrana i visina se prilagodjava po visini samog sadrzaja; redjaju se jedan ispod drugog
+    samo ovakvim elementima mogu da se podese width i hight
+
+    INLINE - ne moze da se podesi widthi hight
+    to su span, a, td
+
+    INLINE-BLOCK - Ovo je kao inline ali moze da se podesi width i hight
+*/
+
