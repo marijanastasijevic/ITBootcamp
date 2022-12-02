@@ -1,0 +1,25 @@
+#tb1, #tb1 th, #tb1 td{
+    border: solid black 1px;
+    border-collapse: collapse;
+    padding: 4px 4px;
+}
+
+#tb1 tr:nth-child(3){
+    background-color: yellow;
+}
+
+#tb2, #tb2 th, #tb2 td{
+    margin-top: 20px;
+    border: solid black 1px;
+    border-collapse: collapse;
+    padding: 4px 4px;
+}
+
+#tb2 th:nth-child(3), #tb2 td:nth-child(3){
+    background-color: rgb(27, 220, 27);
+}
+
+
+
+
+
