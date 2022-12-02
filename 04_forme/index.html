@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forme</title>
+</head>
+<body>
+    <!-- postoje 3 atributa za form: action(navodi se url adresa na koju ce da se posalju podaci iz forme), method(nacin slanja podataka - get i post), id -->
+    <!--  -->
+    <form action="test.php" method="post">
+        <fieldset>
+            <legend>Osnovni podaci:</legend>
+            <p>
+                <!-- for nije obavezan ali postoji za validiranje nekih podataka koji se ne vide na stranici -->
+                <!-- for vezuje labelu i input, to je samo jedan vid validacije za browser, tako smo rekli browseru da su labela i inputi vezani i da ne stoje slucajno jedan za drugim -->
+                <label for="ime">Ime i prezime:</label>
+
+                <!-- input sluzi za ubacivanje podataka u jednoj liniji i sluzi uglavnom za imena i prazimena, nesto kratko -->
+                <!-- atributi za input: 
+                    -maxlength, 
+                    -value(sama vrednost tekstualnog polja na pocetku - podrazumevana vrednost), 
+                    - placeholder(indikator sta treba uneti u polje)
+                    -disabled - polje se prikazuje ali je onemogucen bilo kakav ulaz - njegove vrednosti su true/false
+                -->
+                <input type="text" maxlength="8" value="" placeholder="unesi ime" id="ime" name="ime"> 
+            </p>
+
+            <p>
+                <label for="username">Korisnicko ime:</label>
+                <input type="text" maxlength="12" value="" placeholder="unesi korisnicko ime" id="username"> 
+            </p>
+
+            <p>
+                <label for="pa">Lozinka:</label>
+                <input type="password" id="ps" name="ps">
+            </p>
+            <!-- hidden se ne prikazuje u browseru - primer kupovina na nekom sajtu - imamo dugme naruci, i fa forma ima samo jedno poslje uglavnom za kolicinu, medjutim tu je sigurno jos jedno hidden polje sa id*em kako bi server znao sta mi porucujemo, -->
+            <input type="hidden" id="sakriven" value="100" name="sakriven">
+            
+            <p>
+                <!-- atributi uz input number: min, max, step i odnosi se samo na koriscenje strelica  -->
+                <label for="godine">Godine:</label>
+                <input type="number" id="godine" min="18" step="2">
+            </p>
+
+            <p>
+                <label for="em">Email:</label>
+                <input type="email" id="em">
+            </p>
+
+            <!-- za date su atributi min, max, step -->
+            <!-- <p>
+                <label for="date">Unos datuma:</label>
+                <input type="date" id="date">
+            </p>
+            <p>
+                <label for="time">Vreme:</label>
+                 <input type="time" id="time">
+            </p> -->
+
+            <!-- KOD radio inputa je obavezno polje value, zato sto kada se posalju podaci server ce na osnovu vrednosti znati sta treba da radi -->
+            <!-- uloga radio buttona jeste da moze da se oznaci samo jedan element -->
+            <!-- name se koristi za grupisanje radiobuttona i for se vezuje za name atribut, obavezan je element ako zelimo da iz jedne grupe selektujemo samo jedan element-->
+            <!-- atribut checkd se stavlja tamo gde zelimo da nam neki element bude po difoltu cekiran -->
+            <p>
+                <label for="pol">Odaberite pol:</label>
+                <input type="radio" name="pol" id="z" value="z" checked> Zenski
+                <input type="radio" name="pol" id="m" value="m"> Muski
+                <input type="radio" name="pol" id="d" value="d"> Drugo
+            </p>
+            <!-- checkbox - moze da se odabere vise opcija -->
+            <p>
+                <label for="pj">Odaberite programski jezik</label>
+                <input type="checkbox" name="pj" id="html" value="html" checked> HTML
+                <input type="checkbox" name="pj" id="css" value="css"> CSS
+                <input type="checkbox" name="pj" id="js" value="ja"> JAVASCRIPT
+            </p>
+
+            <!-- <p>
+                <label for="color">Color</label>
+                <input type="color" id="color">
+            </p> -->
+
+            <!-- <p>
+                <label for="file">Postavi file</label>
+                <input type="file" id="file">
+            </p> -->
+
+            <p>
+                <label for="grad">Grad:</label>
+                <select name="grad" id="grad">
+                    <optgroup label="Centralna Srbija">
+                        <option value="kg">Kragujevac</option>
+                        <option value="bg">Beograd</option>
+                    </optgroup>
+                    <optgroup label="Juzna Srbija">
+                        <option value="nis">Nis</option>
+                    </optgroup>
+                   
+                    
+                </select>
+            </p>
+
+            <p>
+                <label for="iskustva">Koja su vasa iskustva za ovaj sajt?</label>
+                <textarea name="iskustva" id="iskustva" cols="30" rows="10">Sve je super</textarea>
+            </p>
+
+            <!-- value je ono sto ce pisati na dugmetu -->
+            <p>
+                <input type="submit" value="Posalji">
+            </p>
+
+        </fieldset>
+
+    </form>
+</body>
+</html>
