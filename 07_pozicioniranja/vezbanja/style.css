@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+#bg-img{
+    background-image: url(https://media-cdn.tripadvisor.com/media/photo-s/1c/28/ef/10/pizza-la-dolce-vita.jpg);
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    position: fixed;
+}
+
+div{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* width: 100%;
+    text-align: center;
+    top: 48%; */
+    /* top: 0; */
+    /* left: 0; */
+    /* right: 0; */
+    /* bottom: 0; */
+    /* left: 0; */
+    /* right: 0; */
+    /* right: 50%;
+    left: 50%; */
+    
+}

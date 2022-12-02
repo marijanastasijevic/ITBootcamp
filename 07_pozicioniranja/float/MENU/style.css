@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* horizontalni meni */
+/* kada ga fiksiramo on ce zauzeti samo onoliko koliko mu je potrebno i zato moramo da dodamo width */
+.topBar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.topBar ul{
+    overflow: hidden;
+    list-style: none;
+
+}
+
+.topBar ul li{
+    background-color: rgba(0, 0, 0, 0.623);
+    width: 25%;
+    float: left;
+    border: 1px solid white;
+    text-align: center;
+   
+}
+
+.topBar a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    display: block; 
+    padding: 10px 0;
+
+}
+
+.topBar a:hover{
+    background-color: red;
+}
+
+/* vertikalni meni */
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer ul li{
+    background-color: rgba(0, 0, 0, 0.623);
+    width: 25%;
+    border: 1px solid white;
+    
+}
+
+footer a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    display: block; 
+    padding: 10px 10px;
+}
+
+footer a:hover{
+    background-color: red;
+}
+
+/* stil za parajuci podmeni */
+
+.submenu{
+    display: none;
+}
+
+.topBar ul li:nth-child(4):hover .submenu{
+    display: block;
+
+}

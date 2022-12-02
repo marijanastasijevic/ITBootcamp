@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.topBar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+
+.topBar
+
+footer{
+    position: fixed;
+    bottom: 0;
+}
