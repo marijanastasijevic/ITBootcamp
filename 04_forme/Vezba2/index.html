@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vezba 2</title>
+</head>
+<body>
+    <form action="">
+        <fieldset class="border">
+            <legend>Form validation</legend>
+            <div class="form">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" class='pd_left'>
+            </div>
+
+            <div class="form">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" class='pd_left'>
+            </div>
+
+            <div class="form">
+                <label for="ps">Password:</label>
+                <input type="password" name="ps" id="ps" class='pd_left'>
+            </div>
+
+            <div class="form">
+                <label for="rtps">Re-type password:</label>
+                <input type="password" name="rtps" id="rtps" class='pd_left'>
+            </div>
+
+            <div class="form">
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender" id="m" value="m" class='pd_left'>Male
+                <input type="radio" name="gender" id="f" value="f">Female
+                <input type="radio" name="gender" id="o" value="o">Other
+            </div>
+
+            <div class="form">
+                <label for="prs">Programming skills:</label>
+                <input type="checkbox" name="prs" id="java" value="java" class='pd_left'>Java
+                <input type="checkbox" name="prs" id="andr" value="andr">Android
+                <input type="checkbox" name="prs" id="ruby" value="ruby">Ruby
+                <input type="checkbox" name="prs" id="net" value="net">.Net
+            </div>
+
+            <div class="form">
+                <label for="cont">Contact no:</label>
+                <input type="number" name="cont" id="cont" class='pd_left'>
+            </div>
+            
+           <div class="form">
+                <label for="em">Email:</label>
+                <input type="email" name="em" id="em" class='pd_left'>
+           </div>
+
+           <div class="form">
+                <label for="college">College:</label>
+                <select name="college" id="college">
+                    <option value=""></option>
+                    <option value="matem" class='pd_left'>Faculty of mathematics</option>
+                    <option value="elec">Faculty of Electrical Engineering</option>
+                    <option value="teh">Faculty of tehnical sciences</option>
+                </select>
+           </div>
+
+           <div class="form">
+                <input type="submit" value="submit">
+           </div>
+        </fieldset>
+    </form>
+    
+</body>
+</html>
