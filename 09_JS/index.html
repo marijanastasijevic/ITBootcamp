@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        ul{
+            color: red;
+        }
+        p{
+            color: blue;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write('<ul><li>Prva stavka liste</li><li>Druga stavka liste</li></ul>');
+    </script>
+    <h1>Moja prva JS vezba</h1>
+    
+    <p>Neki tekst</p>
+    <script>
+        document.write("<p>Paragraf dodat iz JS-a</p>");
+        console.log('Prva poruka u konzoli');
+        // console.log('<p>Tekst u paragrafu</p>') - ne html kod, vec samo poruke
+        //document.getElementById('s1').innerHTML = 'NOVI SADRZAJ DODAT IZ JS-a' - ovo se nece izvrsiti zato sto ne moze da dohvati element sa id-jem koji na stranici posle njega 
+    </script>
+    <span id="s1">Bla bla bla</span>
+    <script>
+        document.write('<p>Tekst van paragrafa</p>'); //ovako pisemo html dokument preko script taga
+        document.getElementById('s1').innerHTML = 'NOVI SADRZAJ DODAT IZ JS-a';
+        console.log(-498);
+        console.log(3.141592);
+        console.log('Tekst');
+        console.log('-154');
+        console.log(3+4);
+        console.log('3 + 4');
+        console.log('3' + '4');
+        console.log(true);
+        console.log(false);
+    </script>
+
+    <!-- <script>
+        window.alert("Hello world"); //ovo ce biti prozorcic sa porukom
+    </script> -->
+    <!-- <script src="script.js"></script> -->
+    <script src="zadaci.js"></script>
+</body>
+</html>
