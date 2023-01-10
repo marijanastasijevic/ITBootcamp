@@ -5,6 +5,7 @@
 // let vremeUMinutima = sati * 60 + minuti;
 // console.log(vremeUMinutima)
 
+/*
 // Zadatak 1 
 
 let sati = 23;
@@ -39,4 +40,66 @@ let m = datum.getMinutes();
 console.log(h + ":" + m)
 let mop = h * 60 + m;
 console.log(mop)
+
+// Zadatak 3
+
+let ukupnaCenaRobe = 1399;
+let novcanica = 2000;
+
+
+let kusur = novcanica - ukupnaCenaRobe;
+console.log(kusur)
+
+// Zadatak 5
+
+let day = datum.getDate();
+let month = datum.getMonth() + 1;
+let year = datum.getFullYear();
+console.log(day + "." + month + "." + year);
+console.log(year + '/' + month + '/' + day);
+document.getElementById('naslovi1').innerHTML = 'OVO JE GET ELEMENT' +  day + "." + month + "." + year
+
+
+// Zdatak 6
+
+// //prva konverzija
+// let euro = 150;
+// let kurs = 117.80;
+
+// let dinara = euro * kurs;
+// console.log(dinara)
+
+// //druga konverzija
+// let novacDinara = 12000;
+// let konverzijeEuro = novacDinara / kurs;
+// console.log(konverzijeEuro);
+
+
+
+// Zadatak 7
+
+let euro = 1;
+let kursEuro = 117.80;
+let kursDolar = 110.88;
+
+let evriUdinare = 
+
+*/
+
+//Zadatak 8
+
+//prva konverzija
+let celsius = 0;
+let far = celsius * 1.8  + 32;
+console.log(far)
+
+//druga konverzija
+
+let farToCelsius = (far - 32) / 1.8;
+console.log(farToCelsius)
+
+
+
+
+
 
