@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRESTORE</title>
+</head>
+<body>
+    <h1>Cuurent tasks</h1>
+    <ul></ul>
+
+    <h1>Add new task</h1>
+
+    <form action="">
+        <label for="title">Title: </label>
+        <input type="text" name="title" id="title" tab="0">
+        <br>
+
+        <label for="start_date">Start date: </label>
+        <input type="datetime-local" name="start_date" id="start_date" tab="1">
+        <br>
+
+        <label for="due_date">Due date: </label>
+        <input type="datetime-local" name="due_date" id="due_date" tab="2">
+        <br>
+
+        <label for="priority">Priority: </label>
+        <input type="checkbox" name="priority" id="priority" tab="3">
+        <br>
+
+        <label for="decription">Description: </label>
+        <textarea name="description" id="description" cols="30" rows="10" tab="4"></textarea>
+        <br>
+
+        <!-- <input type="submit" value="Add new task!" id="add"> -->
+        <button id="add">Add new task!</button>
+    </form>
+
+    <div id="error"></div>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDIcKtwflp2Vx52ucBdrB5UkjXwtD8yl5A",
+            authDomain: "itbootcamp-js-54e70.firebaseapp.com",
+            projectId: "itbootcamp-js-54e70",
+            storageBucket: "itbootcamp-js-54e70.appspot.com",
+            messagingSenderId: "804514133937",
+            appId: "1:804514133937:web:b698f98908df8d35dd6f90",
+            measurementId: "G-KJXT4NCHHL"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        let db = firebase.firestore(); 
+   </script>
+ 
+
+    <script src="script.js"></script>
+</body>
+</html>
