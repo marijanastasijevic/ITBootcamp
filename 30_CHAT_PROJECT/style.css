@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(199, 191, 194);;
+}
+
+h1, h3{
+    text-align: center;
+    color: rgb(123, 7, 54);
+    padding-top: 30px;
+}
+
+#promenaSobe{
+    text-align: center;
+    overflow: hidden;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+#promenaSobe li{
+    float: left;
+    width: 15%;
+    display: block;
+    border: 1px solid  rgb(123, 7, 54);
+    border-radius: 5px;
+    background-color: rgb(123, 7, 54);
+    margin-right: 10px;
+}
+
+#promenaSobe a{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    padding: 10px 10px;
+}
+
+#promenaSobe a:hover{
+    background-color: rgb(176, 12, 173);
+}
+
+.input-btn{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+input{
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#btnSend, #btnUpdate{
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color:  rgb(123, 7, 54);
+    color: white;
+    margin-left: 10px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#listMessage{
+    /* text-align: center; */
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+#listMessage li{
+    list-style: none;
+    border:3px solid rgb(123, 7, 54);
+    box-shadow: 2px 3px rgb(123, 7, 54);;
+    border-radius: 0px 0px 0px 10px;
+    background-color: rgb(241, 189, 212);
+    font-size: 20px;
+    padding: 5px 20px;
+    margin-bottom: 8px;
+}
+
+#messages{
+    display: flex;
+    justify-content: center;
+}
+

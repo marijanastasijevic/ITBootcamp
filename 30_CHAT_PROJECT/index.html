@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <title>It Bootcamp chat</title>
+</head>
+<body>
+
+    <!-- naslov projekta -->
+    <div class="row">
+        <h1 class="col-12 col-t-12 col-m-12">ITBootcamp Chat</h1>
+    </div>
+    
+    <div class="row">
+        <h3 class="col-12 col-t-12 col-m-12">Choose a chatroom</h3>
+
+    </div>
+   
+    <!--Promena sobe  -->
+    <section class="row">
+        <ul id="promenaSobe" class="col-12 col-t-12 col-m-12">
+            <li><a href="#">#general</a></li>
+            <li><a href="#">#js</a></li>
+            <li><a href="#">#homeworks</a></li>
+            <li><a href="#">#tests</a></li>
+        </ul>
+    </section>
+
+    <!-- prikaz poruka -->
+    <section id="messages" class="row">
+      <ul id="listMessage" class="col-6 col-t-12 col-m-12">
+        <!-- ovde ce se nalaziti poruke -->
+      </ul>
+    </section>
+
+    <!-- Unos korisnickog imena -->
+    
+    <div class="form-message-update">
+        <form id="formMessage" class="input-btn row">
+            <span class="col-2">&nbsp;</span>
+            <input type="text" name="message" id="message" placeholder="Your message" class="col-6 col-t-10 col-m-10">
+            <input type="submit" value="Send" id="btnSend" class="col-2 col-t-2 col-m-2">
+            <span class="col-2">&nbsp;</span>
+        </form>
+    </div>
+
+    <div class="form-message-update"> 
+        <form id="formUpdate" class="input-btn row">
+            <span class="col-2">&nbsp;</span> 
+            <input type="text" name="update" id="update" placeholder="Update username" class="col-6 col-t-10 col-m-10">
+            <input type="submit" value="Update" id="btnUpdate" class="col-2 col-t-2 col-m-2">
+            <span class="col-2">&nbsp;</span>
+        </form>
+    </div>  
+   
+    
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAkNMdjnOcIsUOAWNcKPYKmwoCo1j2LW08",
+            authDomain: "itbootcamp-chat-87a3c.firebaseapp.com",
+            projectId: "itbootcamp-chat-87a3c",
+            storageBucket: "itbootcamp-chat-87a3c.appspot.com",
+            messagingSenderId: "29513380252",
+            appId: "1:29513380252:web:0ed4ddcb5015f8d5721859",
+            measurementId: "G-NZ6W4NKZG5"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        let db = firebase.firestore(); 
+    </script>
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>
