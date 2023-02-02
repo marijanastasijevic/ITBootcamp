@@ -32,7 +32,7 @@ export class ChatUI {
 
     templateLi(data){
         let formaVreme = this.formaVreme(data);
-        
+
         let liItem = 
         `<li>
             <span class="username">${data.username}:</span>
@@ -41,6 +41,11 @@ export class ChatUI {
         </li>`;
 
         this._list.innerHTML += liItem
+    }
+
+    //brisemo poruke - metodu pozivam u app.js
+    clearUL() {
+        this.list.innerHTML = '';
     }
 }
 

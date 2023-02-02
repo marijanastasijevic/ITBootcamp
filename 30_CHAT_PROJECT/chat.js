@@ -4,6 +4,7 @@ export class Chatroom {
         this.room = r;
         this.username = u;
         this.chats = db.collection('chats'); // ne prosledjuje se kao parametar zato sto je ovo po difoltu postavaljeno, nema potrebe da se prosledjuje
+        this.unsub; // bice undefined prilikom preiranja objekate
     }
 
     get room () {
@@ -45,6 +46,14 @@ export class Chatroom {
         return !sviPrazni;
     }
 
+    //Update room
+    updateRoom(ur){
+        this.room = ur; // pozove seter i promeni sobu
+        if(this.unsub){
+            this.unsub(); 
+        }
+    }
+
     //metod za dodavanje ceta
     async addChat(message) {
         let date = new Date();
@@ -55,7 +64,6 @@ export class Chatroom {
             username: this.username,
             room: this.room,
             created_at: ts
-
         }
     
         return this.chats.add(docChat) 
@@ -68,9 +76,9 @@ export class Chatroom {
 
     // pracenje poruka u bazi i ispis dodatih poruka
     getChats(callback) { 
-        this.chats
-        // .where('room', '==', this.room)
-        // .orderBy('created_at')
+        this.unsub = this.chats
+        .where('room', '==', this.room)
+        .orderBy('created_at')
         .onSnapshot(snapshot => {
             let changes = snapshot.docChanges();
             changes.forEach(change => {

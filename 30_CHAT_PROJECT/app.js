@@ -1,28 +1,26 @@
 import {Chatroom} from './chat.js';
 import {ChatUI} from './ui.js'
 
+
+// DOM
+let ul = document.getElementById('listMessage');
 let formaMessage = document.getElementById('formMessage');
 let inputMessage = document.getElementById('message');
 let formaUpdate = document.getElementById('formUpdate');
-let inputUpdate = document.getElementById('update')
+let inputUpdate = document.getElementById('update');
+let divPromenaSobe = document.getElementById('promenaSobe');
 
 //ako postoji u lokalnoj memoriji setuj na to ime umesto postojeceg a ako ne postoji nista onda setuj na anonimus
-let chatroom = new Chatroom("#js", "Jelena");
-
 let user = 'Anonymus';
 
 if(localStorage.username == true){
     user = localStorage.username
 }
 
-chatroom.getChats(data => {
-    console.log(data)
-});
-
-////////////////////////
-
-let ul = document.getElementById('listMessage');
+// OBJEKTI KLASE
+let chatroom = new Chatroom("#js", user);
 let chatUI = new ChatUI(ul);
+
 
 chatroom.getChats(data => {   //data salje document po document(snapshot)
     chatUI.templateLi(data)
@@ -56,11 +54,24 @@ formaUpdate.addEventListener('submit', e => {
     formaUpdate.reset()
 })
 
-// chatroom2.addChat('Hr trening je sutra u 18h')
-// .then(() => {
-//     console.log('Uspesno dodat chat!')
-// })
-// .catch((err) => {
-//     console.log('Greska' + err);
-// })
+// promenljiva hoja "hvata" u kojoj ste sobi tj. na koje dugme ste kliknuli
+divPromenaSobe.addEventListener('click', e => {
+    e.preventDefault();
+
+    if(e.target.tagName === 'BUTTON'){
+       //1. Uzimam ime sobe na koju je kliknuto
+       let novaSoba = e.target.textContent;
+    
+       //2. Update sobe na koju je kliknuto
+       chatroom.updateRoom(novaSoba);
+
+        // Izbrisati sve poruke sa ekrana
+       chatUI.clearUL();
+
+       //4.Prikazi cetove
+        chatroom.getChats(data => {   //data salje document po document(snapshot)
+            chatUI.templateLi(data)
+        })
+    }
+})
 
