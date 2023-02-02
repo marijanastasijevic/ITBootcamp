@@ -20,8 +20,29 @@ export class Chatroom {
     }
 
     set username(u) {
-        this._username = u;
-        
+        if(this.proveriUsername(u)){
+            this._username = u;
+            
+        }
+        else{
+            alert('Nevalidno korisnicko ime!!!')
+        }
+    }
+
+    proveriUsername(u){
+        if(u.length <= 2 || u.length >= 10){
+            return false;
+        }
+
+        let sviPrazni = true;
+
+        for(let i = 0; i < u.length; i++){
+            if(u[i] != ' ' && u[i] != '    '){
+                sviPrazni = false;
+            }
+        }
+
+        return !sviPrazni;
     }
 
     //metod za dodavanje ceta
