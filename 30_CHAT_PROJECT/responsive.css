@@ -12,11 +12,9 @@
         display: block;
     }
 
-    #promenaSobe li {
+    #promenaSobe button {
         width: 100%;
         margin-bottom: 5px;
-    }
-    #promenaSobe a{
         font-size: 18px;
     }
     

@@ -12,7 +12,8 @@ export class ChatUI {
         this._list = l
     }
 
-    formatVreme(date){
+    formaVreme(data){
+        let date = data.created_at.toDate();
         let year = date.getFullYear();
         let month = date.getMonth() + 1;
         let day = date.getDay();
@@ -24,14 +25,14 @@ export class ChatUI {
         hours = String(hours).padStart(2, "0");
         minutes = String(minutes).padStart(2, "0");
 
-        let ispisDatuma = day + "." + month + '.' + year + '.' + " " + '-' + ' ' +hours + ":" + minutes;
+        let ispis = day + '.' + month + '.' + year + '.' + ' ' + '-' + ' ' +hours + ':' + minutes;
 
-        return ispisDatuma;
+        return ispis;
     }
 
     templateLi(data){
-        let date = data.created_at.toDate();
-        let formaVreme = this.formatVreme(date)
+        let formaVreme = this.formaVreme(data);
+        
         let liItem = 
         `<li>
             <span class="username">${data.username}:</span>

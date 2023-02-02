@@ -22,28 +22,22 @@ h1, h3{
     justify-content: center;
 }
 
-#promenaSobe li{
-    float: left;
+button{
     width: 15%;
     display: block;
     border: 1px solid  rgb(123, 7, 54);
     border-radius: 5px;
     background-color: rgb(123, 7, 54);
     margin-right: 10px;
-}
-
-#promenaSobe a{
     color: white;
-    font-weight: bold;
     font-size: 18px;
-    text-decoration: none;
-    display: block;
-    padding: 10px 10px;
+    font-weight: bold;
+    padding: 5px 15px;
 }
 
-#promenaSobe a:hover{
+#promenaSobe button:hover{
     background-color: rgb(176, 12, 173);
-}
+} 
 
 .input-btn{
     display: flex;
