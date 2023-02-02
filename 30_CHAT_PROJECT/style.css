@@ -52,7 +52,7 @@ input{
 }
 
 input:focus{
-    border: 3px solid rgb(32, 30, 31);
+    border: 4px solid rgb(32, 30, 31);
 }
 
 #btnSend, #btnUpdate{

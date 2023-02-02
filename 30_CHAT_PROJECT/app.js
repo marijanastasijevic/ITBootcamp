@@ -79,6 +79,20 @@ divPromenaSobe.addEventListener('click', e => {
     if(e.target.tagName === 'BUTTON'){
        //1. Uzimam ime sobe na koju je kliknuto
        let novaSoba = e.target.textContent;
+       console.log(novaSoba);
+
+       let btnSoba = document.getElementsByClassName('btn');
+       let btn = Array.from(btnSoba);
+        btn.forEach(b => {
+            if(b.textContent == novaSoba){
+                b.style.backgroundColor = 'rgb(148, 26, 112)';
+                b.style.border = '5px solid rgb(32, 30, 31)'
+            }
+            else{
+                b.style.backgroundColor = 'rgb(123, 7, 54)';
+                b.style.border = '1px solid  rgb(123, 7, 54)'
+            }
+        })
         
        //2. Update sobe na koju je kliknuto
        chatroom.updateRoom(novaSoba);
