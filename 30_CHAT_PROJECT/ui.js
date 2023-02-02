@@ -16,7 +16,7 @@ export class ChatUI {
         let date = data.created_at.toDate();
         let year = date.getFullYear();
         let month = date.getMonth() + 1;
-        let day = date.getDay();
+        let day = date.getDate();
         let hours = date.getHours();
         let minutes = date.getMinutes();
 
@@ -25,7 +25,19 @@ export class ChatUI {
         hours = String(hours).padStart(2, "0");
         minutes = String(minutes).padStart(2, "0");
 
-        let ispis = day + '.' + month + '.' + year + '.' + ' ' + '-' + ' ' +hours + ':' + minutes;
+        let now = new Date();
+        let nowDay = now.getDate();
+        let nowMonth = now.getMonth() + 1;
+        let nowYear = now.getFullYear();
+
+        let ispis;
+
+        if(day == nowDay && month == nowMonth && year == nowYear){
+            ispis = `${hours}:${minutes}`
+        }
+        else{
+            ispis = `${day}.${month}.${year}. - ${hours}:${minutes}`
+        }
 
         return ispis;
     }

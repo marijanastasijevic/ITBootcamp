@@ -36,7 +36,8 @@ button{
 }
 
 #promenaSobe button:hover{
-    background-color: rgb(176, 12, 173);
+    background-color: rgb(148, 26, 112);
+    border: 5px solid rgb(32, 30, 31);
 } 
 
 .input-btn{
@@ -50,6 +51,10 @@ input{
     border-radius: 5px;
 }
 
+input:focus{
+    border: 3px solid rgb(32, 30, 31);
+}
+
 #btnSend, #btnUpdate{
     font-size: 18px;
     padding: 5px 10px;
@@ -59,6 +64,11 @@ input{
     margin-left: 10px;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
+}
+
+#btnSend:hover, #btnUpdate:hover{
+    background-color:  rgb(148, 26, 112);
+    border: 5px solid rgb(32, 30, 31);
 }
 
 #listMessage{
@@ -81,5 +91,22 @@ input{
 #messages{
     display: flex;
     justify-content: center;
+}
+
+#username-ispis{
+    display: flex;
+    justify-content: center;
+}
+
+.novi-username{
+    text-align: center;
+    border: 3px solid rgb(32, 30, 31);
+    border-radius: 50px 15px;
+    background-color:  rgb(148, 26, 112);
+    font-size: 40px;
+    margin-top: 50px;
+    width: 400px;
+    font-weight: bold;
+    padding: 10px 0px;
 }
 
