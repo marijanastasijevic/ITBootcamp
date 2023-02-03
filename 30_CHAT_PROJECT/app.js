@@ -6,26 +6,43 @@ import {ChatUI} from './ui.js'
 let ul = document.getElementById('listMessage');
 let formaMessage = document.getElementById('formMessage');
 let inputMessage = document.getElementById('message');
-let btnMessage = document.getElementById('btnSend')
 let formaUpdate = document.getElementById('formUpdate');
 let inputUpdate = document.getElementById('update');
 let divPromenaSobe = document.getElementById('promenaSobe');
 
 //ako postoji u lokalnoj memoriji setuj na to ime umesto postojeceg a ako ne postoji nista onda setuj na anonimus
 let user = 'Anonymus';
+if(localStorage.username != null){
+    user = localStorage.username;  
+}
 
-if(localStorage.username == true){
-    user = localStorage.username
+let divUsernameIspis = document.getElementById('username-ispis');
+
+let pUsername = document.createElement('p');
+
+divUsernameIspis.appendChild(pUsername);
+pUsername.textContent = user;
+pUsername.classList.add('novi-username');
+
+setInterval(() => {
+    divUsernameIspis.removeChild(pUsername);
+    pUsername.style.border = 'none';
+}, 3000)
+
+let kanal = '#js';
+if(localStorage.kanal != null){
+    kanal = localStorage.kanal;
 }
 
 // OBJEKTI KLASE
-let chatroom = new Chatroom("#js", user);
+let chatroom = new Chatroom(kanal, user);
 let chatUI = new ChatUI(ul);
 
 
 chatroom.getChats(data => {   //data salje document po document(snapshot)
     chatUI.templateLi(data)
 })
+chatroom.username = user;
 
 
 formaMessage.addEventListener('submit', e => {
@@ -57,18 +74,20 @@ formaUpdate.addEventListener('submit', e => {
 
     formaUpdate.reset();
 
-    let divUsernameIspis = document.getElementById('username-ispis');
+    // let divUsernameIspis = document.getElementById('username-ispis');
 
-    let pUsername = document.createElement('p')
+    // let pUsername = document.createElement('p');
 
-    divUsernameIspis.appendChild(pUsername);
-    pUsername.textContent = updateUser;
-    pUsername.classList.add('novi-username');
+    // divUsernameIspis.appendChild(pUsername);
+    // pUsername.textContent = updateUser;
+    // pUsername.classList.add('novi-username');
 
-    setInterval(() => {
-       divUsernameIspis.removeChild(pUsername)
-       pUsername.style.border = 'none';
-    }, 3000)
+    // setInterval(() => {
+    //    divUsernameIspis.removeChild(pUsername);
+    //    pUsername.style.border = 'none';
+    // }, 3000)
+
+    window.location.reload();
 
 })
 
@@ -80,6 +99,7 @@ divPromenaSobe.addEventListener('click', e => {
        //1. Uzimam ime sobe na koju je kliknuto
        let novaSoba = e.target.textContent;
        console.log(novaSoba);
+       localStorage.setItem("kanal", novaSoba);
 
        let btnSoba = document.getElementsByClassName('btn');
        let btn = Array.from(btnSoba);

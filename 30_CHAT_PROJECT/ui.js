@@ -44,13 +44,26 @@ export class ChatUI {
 
     templateLi(data){
         let formaVreme = this.formaVreme(data);
+        let trenutniUser = localStorage.getItem('username');
 
-        let liItem = 
-        `<li>
-            <span class="username">${data.username}:</span>
-            <span class="message">${data.message}</span>
-            <div class="data">${formaVreme}</div>
-        </li>`;
+        let liItem;
+
+        if(data.username == trenutniUser){
+            liItem = 
+            `<li class="desno">
+                <span class="username">${data.username}:</span>
+                <span class="message">${data.message}</span>
+                <div class="data">${formaVreme}</div>
+            </li>`
+        }
+        else{
+            liItem = 
+            `<li class="levo">
+                <span class="username">${data.username}:</span>
+                <span class="message">${data.message}</span>
+                <div class="data">${formaVreme}</div>
+            </li>`
+        }
 
         this._list.innerHTML += liItem
     }

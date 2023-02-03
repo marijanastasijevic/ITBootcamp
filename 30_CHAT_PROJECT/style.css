@@ -71,28 +71,6 @@ input:focus{
     border: 5px solid rgb(32, 30, 31);
 }
 
-#listMessage{
-    /* text-align: center; */
-    padding-top: 20px;
-    margin-bottom: 50px;
-}
-
-#listMessage li{
-    list-style: none;
-    border:3px solid rgb(123, 7, 54);
-    box-shadow: 2px 3px rgb(123, 7, 54);;
-    border-radius: 0px 0px 0px 10px;
-    background-color: rgb(241, 189, 212);
-    font-size: 20px;
-    padding: 5px 20px;
-    margin-bottom: 8px;
-}
-
-#messages{
-    display: flex;
-    justify-content: center;
-}
-
 #username-ispis{
     display: flex;
     justify-content: center;
@@ -110,3 +88,52 @@ input:focus{
     padding: 10px 0px;
 }
 
+
+#messages{
+    display: flex;
+    justify-content: center;
+}
+
+#listMessage{
+    overflow: hidden;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+#listMessage li{
+    list-style: none;
+    border:3px solid rgb(123, 7, 54);
+    box-shadow: 2px 3px rgb(123, 7, 54);;
+    border-radius: 0px 0px 0px 10px;
+    background-color: rgb(241, 189, 212);
+    font-size: 20px;
+    padding: 5px 20px;
+    margin-bottom: 8px;
+}
+
+
+/* #listMessage li{
+    list-style: none;
+    border:3px solid rgb(123, 7, 54);
+    box-shadow: 2px 3px rgb(123, 7, 54);;
+    border-radius: 0px 0px 0px 10px;
+    background-color: rgb(241, 189, 212);
+    font-size: 20px;
+    padding: 5px 20px;
+    margin-bottom: 8px;
+} */
+
+
+#listMessage .desno{
+    background-color: rgb(206, 80, 136);
+    width: 50%;
+    float: right;
+    margin-left: 10px;
+}
+
+#listMessage .levo{
+    width: 50%;
+    float: left;
+    /* background-color: red; */
+    margin-right: 10px;
+}
