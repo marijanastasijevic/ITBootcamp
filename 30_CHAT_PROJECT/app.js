@@ -24,7 +24,7 @@ divUsernameIspis.appendChild(pUsername);
 pUsername.textContent = user;
 pUsername.classList.add('novi-username');
 
-setInterval(() => {
+setTimeout(() => {
     divUsernameIspis.removeChild(pUsername);
     pUsername.style.border = 'none';
 }, 3000)
